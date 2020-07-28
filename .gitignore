@@ -1,0 +1,5 @@
+# Go
+coverage.out
+
+# IntelliJ IDEA
+.idea/

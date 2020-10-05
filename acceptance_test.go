@@ -56,9 +56,9 @@ func AcceptanceTests() int {
 	flag.Parse()
 	opts.Paths = flag.Args()
 	return godog.TestSuite{
-		Name: "gameoflife-go",
+		Name:                "gameoflife-go",
 		ScenarioInitializer: InitializeScenario,
-		Options: &opts,
+		Options:             &opts,
 	}.Run()
 }
 

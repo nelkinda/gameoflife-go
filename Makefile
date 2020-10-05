@@ -9,7 +9,7 @@ fmt:
 test: coverage.out
 
 coverage.out: $(wildcard *.go)
-	go test -test.cover -test.coverprofile=coverage.out
+	go test -test.coverprofile=coverage.out
 
 .PHONY:
 html: coverage.out

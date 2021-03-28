@@ -12,8 +12,12 @@ type Universe struct {
 func (u *Universe) Next() *Universe {
 	return &Universe{
 		rules: u.rules,
-		life:  Union(u.survivingCells(), u.bornCells()),
+		life:  u.cellsOfNextGeneration(),
 	}
+}
+
+func (u *Universe) cellsOfNextGeneration() PointSet {
+	return Union(u.survivingCells(), u.bornCells())
 }
 
 func (u *Universe) survivingCells() PointSet {
